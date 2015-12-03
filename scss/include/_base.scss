@@ -1,0 +1,95 @@
+//Modifique los estilos base desde las variables
+body {
+  background  : $body--background;
+  font-family : $body--font-family;
+  color       : $body--color;
+  font-size: $body--size;
+}
+
+a {
+  color           : $link--color;
+  text-decoration : none;
+}
+
+p, blockquote, li {
+  font-size   : $p--font-size;
+  line-height : $p--line-height;
+}
+
+p {
+  margin : 0 0 $p--margin 0;
+
+  &:last-child,
+  &:only-child {
+      margin: 0;
+  }
+}
+
+blockquote {
+
+}
+
+// Estilos básicos de los encabezados
+h1, h2, h3, h4, h5, h6 {
+  font-family    : $header--font-family;
+  font-weight    : $header--font-weight;
+  text-transform : $header--text-transform;
+  color          : $header--color;
+}
+
+// Tamaños y estilos de los encabezados:
+h1 {
+  font-size : $h1--font-size;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size : $h2--font-size;
+}
+
+h3 {
+  font-size : $h3--font-size;
+}
+
+h4 {
+  font-size : $h4--font-size;
+}
+
+h5 {
+  font-size : $h5--font-size;
+}
+
+h6 {
+  font-size : $h6--font-size;
+}
+
+
+
+/*-- establecer cuadro fronterizo en todos los elementos dentro de la red --*/
+.contenedor *{
+  box-sizing: border-box; 
+}
+[class*='col-'] {
+  float: left;
+  min-height: 1px; 
+  width: 10%;
+  /*-- nuestra alcantarilla --*/
+  padding: 5px;
+}
+
+.contenedor{
+  width: 100%;
+  max-width: $max-width; /* 1200px */
+  margin: 0 auto;
+}
+
+.grupo:before,
+.grupo:after {
+  content:"";
+  display: table ;
+  clear:both;
+}
+
+@for $i from 1 through 10 {
+  .col-#{$i} { width: 10 * $i + % }
+}

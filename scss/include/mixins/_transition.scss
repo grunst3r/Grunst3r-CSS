@@ -1,0 +1,11 @@
+@mixin transition(
+	$tiempo : 500ms
+	){
+	-webkit-transition: all $tiempo ease;
+	-moz-transition: all $tiempo ease;
+	-ms-transition: all $tiempo ease;
+	-o-transition: all $tiempo ease;
+	transition: all $tiempo ease;
+}
+
+

@@ -1,0 +1,58 @@
+// Ancho máximo de cada grupo
+$max-width: 1200px;
+
+// Tamaños. Puede editar los nombres y las
+// medidas, añadir más o quitar.
+$breakpoints: (
+  movil  : 480px,
+  tablet : 768px,
+  web    : 1024px,
+  hd     : 1400px
+);
+
+// Variables para aplicarlas en font-weight
+	$light      : 300;
+	$normal     : 400;
+	$semi-bold  : 600;
+	$bold       : 700;
+	$extra-bold : 800;
+
+
+// ESTILOS BASE
+$body--background  : #fff; // fondo para el body
+$body--font-family : 'Open Sans', sans-serif; // fuente predeterminada
+$body--color       : #333;
+$body--size: .9em;
+
+$link--color : #0c65a5;
+
+$p--font-size   : 1em; 			// Tamaño de fuente
+$p--line-height : 1.5;  		// Altura de línea
+$p--margin      : 1em; 			// Separación entre un párrafo y el siguiente
+
+// ESTILOS DE ENCABEZADOS
+$header--font-family    : 'Open Sans', sans-serif; 	// fuente para los headers (h1,h2,h3...)
+$header--font-weight    : $bold; 					// grosor de fuente para los headers
+$header--text-transform : normal; 					// normal, uppercase, lowercase, capitalize
+$header--color          : #222;						// color predeterminado de los header
+
+// TAMAÑO DE LOS ENCABEZADOS (h1...h6)
+$h1--font-size : 2em;
+$h2--font-size : 1.6em;
+$h3--font-size : 1.3em;
+$h4--font-size : 1em;
+$h5--font-size : .9em;
+$h6--font-size : .8em;
+
+
+// Librerias
+@import "scss/include/normalize";
+@import "scss/include/base";      // Base
+@import "scss/include/mixins";      // Mixins
+@import "scss/include/video";       // Videos responsive
+@import "scss/include/icon-fonts";       // Videos responsive
+
+@import "scss/header";
+@import "scss/menu";
+@import "scss/main";
+@import "scss/footer";
